@@ -1,7 +1,9 @@
-import { Inter } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 import "./globals.css";
+import MovieProvider from "@/Context/MovieContext";
+import NavBar from "@/Components/NavBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const EB = EB_Garamond({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <MovieProvider>
+        <body className={`scroll-smooth ${EB.className}`}>
+          <NavBar/>
+          {children}
+        </body>
+        </MovieProvider>
     </html>
   );
 }

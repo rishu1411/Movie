@@ -1,33 +1,44 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(59, 59, 59);
+}
+.nav{
+    @apply  text-gray-300 text-base border-2 rounded-md py-1 w-auto px-1 text-center hover:border-red-500 tracking-wide  hover:text-red-500 cursor-pointer
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
   }
-}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    height: 10px;
+    border-radius: 5px;
+  }
+  
+  .glass{
+    background: rgba(71, 68, 68, 0.571);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+backdrop-filter: blur( 12px );
+-webkit-backdrop-filter: blur( 12px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
