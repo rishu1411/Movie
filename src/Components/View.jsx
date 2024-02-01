@@ -3,7 +3,7 @@ import { MovieContext } from '@/Context/MovieContext'
 import React, { useContext, useState } from 'react'
 import Image from 'next/image'
 import star from '../Assets/AllStarsBig.jpg'
-import imbd from '@/Assets/imbd.svg'
+import imbd from '@/Assets/Imbd.svg'
 import Link from 'next/link'
 
 
